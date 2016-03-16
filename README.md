@@ -1,6 +1,4 @@
-# rand
-
-## Ruby on Rails
+## rand (Ruby on Rails)
 
 A simple rails app for managing project time tracking.
 
