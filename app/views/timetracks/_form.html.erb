@@ -1,0 +1,33 @@
+<%= form_for(@timetrack) do |f| %>
+  <% if @timetrack.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@timetrack.errors.count, "error") %> prohibited this timetrack from being saved:</h2>
+
+      <ul>
+      <% @timetrack.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br>
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :total_time %><br>
+    <%= f.datetime_select :total_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

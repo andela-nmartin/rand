@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @timetrack.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @timetrack.user_id %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @timetrack.project_id %>
+</p>
+
+<p>
+  <strong>Total time:</strong>
+  <%= @timetrack.total_time %>
+</p>
+
+<%= link_to 'Edit', edit_timetrack_path(@timetrack) %> |
+<%= link_to 'Back', timetracks_path %>
